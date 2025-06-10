@@ -22,6 +22,7 @@ html,body{
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.219);
     background-color: rgb(255, 255, 255);
+    transition: max-width 0.3s, padding 0.3s;
 }
 
 .searchInput{
@@ -55,4 +56,51 @@ html,body{
     display: flex;
     flex-direction: column;
     gap: 6px;
+}
+
+
+
+@media (max-width: 900px) {
+    .container {
+        max-width: 70%;
+        padding: 40px 10px;
+    }
+    .userItem .userImg img {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        max-width: 98%;
+        padding: 20px 2vw;
+    }
+    .userItem {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 10px 8px;
+    }
+    .userItem .userImg img {
+        width: 50px;
+        height: 50px;
+    }
+    .searchInput {
+        padding: 10px 8px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .container {
+        padding: 10px 2vw;
+    }
+    .userItem .userImg img {
+        width: 40px;
+        height: 40px;
+    }
+    .searchInput {
+        font-size: 0.9rem;
+    }
 }
